@@ -1,0 +1,42 @@
+A ciência da computação busca resolver problemas,
+seguindo basicamente a estrutura de:
+input -> [código] -> output
+
+O código binário é composto por zero e um, 
+vamos representar alguns números:
+000 = 0
+001 = 1
+010 = 2
+011 = 3
+100 = 4
+101 = 5
+110 = 6
+111 = 7
+
+Você pode ver que o número 8 está faltando, ao adiconar
+mais um dígito ao código teremos o número 8:
+1000 = 8
+1001 = 9
+1010 = 10
+1011 = 11
+1100 = 12
+
+Os computadores utilizam base 2 para representar informações:
+4 2 1
+0 0 0 
+
+Ou seja, para adicionar o número 8, precisamos de mais um bit:
+8 4 2 1
+0 0 0 0
+
+Um byte contém (8 bits):
+00000000
+
+Podendo representara até 255:
+128 64 32 16 8 4 2 1 = 255
+  1  1  1  1 1 1 1 1 = 255
+
+Um computador tendo 8 bits pode contar até 64:
+11111111 = 64 ou 8^2
+
+

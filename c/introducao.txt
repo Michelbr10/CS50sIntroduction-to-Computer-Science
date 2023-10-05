@@ -1,0 +1,8 @@
+para copilar usando a biblioteca do cs50
+
+> gcc NOMEARQUIVO.c -o NOMEARQUIVO cs50.c
+
+para exibir o conteúdo de uma variável do tipo string
+usa dentro do printf o '%s'
+> printf("Meu nome é %s", nome);
+
