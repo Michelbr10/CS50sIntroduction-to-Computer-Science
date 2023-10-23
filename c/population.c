@@ -3,10 +3,13 @@
 
 int main(void)
 {
-    int population = get_int("Numero de Lhamas: ");
-    int nasce = population/3;
-    int morre = population/4;
-    int resultado = population + nasce - morre;
+    int population;
+    do {
+        population = get_int("Population of Lhamas: \n");
+    }
+    while (population < 0);
+
+    int resultado = population + (population/3) - (population/4);
 
     printf("Populacao: %i", resultado);
 }
