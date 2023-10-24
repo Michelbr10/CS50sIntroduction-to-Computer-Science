@@ -4,25 +4,22 @@
 
 int main(void)
 {
-    int inicial, final;
-
-    // população inicial
-    do {
-        inicial = get_int("Populacao inicial: \n");
+    double inicial, final;
+    do 
+    {
+        inicial = get_double("Populacao inicial: ");
     }
     while (inicial < 9);
 
-    // população final
-    do {
-    final = get_int("Populacao final: \n");
+    do 
+    {
+        final = get_double("Populacao final: ");
     }
     while (final < inicial);
 
-    // crescimento anual
-    int crescimento = ((inicial / 3) - (inicial / 4));
+    double crescimento = ((double) 1 / 3) - ((double) 1 / 4);
 
-    // anos para atingir a meta
-    double anos = ((double) log(final / inicial)) / ((double) log(1 + crescimento / inicial));
+    double resultado = log10f((double) final / inicial) / log10f((double) 1 + crescimento);
 
-    printf("Anos: %d", log(anos));
+    printf("%i", (int) resultado);
 }
