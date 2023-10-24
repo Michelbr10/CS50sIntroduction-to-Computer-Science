@@ -1,15 +1,28 @@
 #include <cs50.h>
 #include <stdio.h>
+#include <math.h>
 
 int main(void)
 {
-    int population;
+    int inicial, final;
+
+    // população inicial
     do {
-        population = get_int("Population of Lhamas: \n");
+        inicial = get_int("Populacao inicial: \n");
     }
-    while (population < 0);
+    while (inicial < 9);
 
-    int resultado = population + (population/3) - (population/4);
+    // população final
+    do {
+    final = get_int("Populacao final: \n");
+    }
+    while (final < inicial);
 
-    printf("Populacao: %i", resultado);
+    // crescimento anual
+    int crescimento = ((inicial / 3) - (inicial / 4));
+
+    // anos para atingir a meta
+    double anos = ((double) log(final / inicial)) / ((double) log(1 + crescimento / inicial));
+
+    printf("Anos: %d", log(anos));
 }
